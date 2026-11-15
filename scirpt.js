@@ -156,7 +156,7 @@ async function start() {
 
     try {
         // โหลดแบบนี้เพื่อแสดงข้อความได้หาก config.js ตั้งค่าไม่ครบ
-        ({ db } = await import('./config.js'));
+        ({ db } = await import('./config.js?v=2'));
 
         const { data, error } = await db.auth.getSession();
         if (error) throw error;
