@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>เข้าสู่ระบบ | Member System</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="./script.js"></script>
+</head>
+
+<body>
+    <main class="card">
+        <div class="logo">🔐</div>
+
+        <h1>Member System</h1>
+        <p class="subtitle">ระบบสมาชิกออนไลน์</p>
+
+        <div class="tabs">
+            <button
+                id="loginTab"
+                class="active"
+                type="button"
+                disabled
+            >
+                เข้าสู่ระบบ
+            </button>
+
+            <button id="registerTab" type="button" disabled>
+                สมัครสมาชิก
+            </button>
+        </div>
+
+        <form id="authForm">
+            <div id="nameGroup" hidden>
+                <label for="fullName">ชื่อ–นามสกุล</label>
+                <input
+                    id="fullName"
+                    type="text"
+                    maxlength="100"
+                    autocomplete="name"
+                    placeholder="เช่น เอกชัย สบายจิตร"
+                >
+            </div>
+
+            <label for="email">อีเมล</label>
+            <input
+                id="email"
+                type="email"
+                autocomplete="username"
+                placeholder="name@example.com"
+                required
+            >
+
+            <label for="password">รหัสผ่าน</label>
+            <input
+                id="password"
+                type="password"
+                autocomplete="current-password"
+                required
+            >
+
+            <button id="submitBtn" class="primary" type="submit" disabled>
+                เข้าสู่ระบบ
+            </button>
+        </form>
+
+        <p id="message" class="message" role="status" aria-live="polite">
+            กำลังเชื่อมต่อระบบ…
+        </p>
+    </main>
+</body>
+</html>

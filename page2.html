@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>หน้าสมาชิก | Member System</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="./page2.js"></script>
+</head>
+
+<body>
+    <main class="card">
+        <div class="logo">👤</div>
+        <h1>หน้าสมาชิก</h1>
+
+        <p id="status" class="message" role="status" aria-live="polite">
+            กำลังตรวจสอบการเข้าสู่ระบบ…
+        </p>
+
+        <section id="memberContent" hidden>
+            <h2>ยินดีต้อนรับ <span id="displayName"></span></h2>
+
+            <dl class="details">
+                <dt>อีเมล</dt>
+                <dd id="displayEmail"></dd>
+
+                <dt>วันที่สมัครสมาชิก</dt>
+                <dd id="displayCreatedAt"></dd>
+            </dl>
+
+            <div class="panel">
+                พื้นที่นี้สามารถเพิ่มเมนู บทเรียน หรือข้อมูลสำหรับสมาชิกได้
+            </div>
+        </section>
+
+        <button id="logoutBtn" class="primary" type="button" hidden>
+            ออกจากระบบ
+        </button>
+
+        <a class="back-link" href="./index.html">กลับหน้าแรก</a>
+    </main>
+</body>
+</html>
